@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AppTheme {
     static let corner: CGFloat = 16
-    static let cardHeight: CGFloat = 180
+    static let tarotAspect: CGFloat = 0.58
     
     static var gradient: LinearGradient {
         LinearGradient(
@@ -38,7 +38,10 @@ struct PillButton: View {
             }
             .frame(maxWidth: .infinity)
             .padding()
-            .background(prominent ? AppTheme.gradient : .thinMaterial)
+            .background(
+                prominent ? AnyShapeStyle(AppTheme.gradient)
+                          : AnyShapeStyle(.thinMaterial)
+            )
             .foregroundStyle(prominent ? .white : .primary)
             .clipShape(RoundedRectangle(cornerRadius: AppTheme.corner))
         }

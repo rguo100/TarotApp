@@ -6,6 +6,8 @@ struct HomeView: View {
     @State private var question: String = ""
     @State private var showingSettings = false
     @State private var gotoOne = false
+    @State private var gotoThree = false
+    @State private var path = NavigationPath()
     
     var body: some View {
         NavigationStack {
@@ -34,6 +36,7 @@ struct HomeView: View {
                     destination: DrawView(question: "", spread: .one),
                     isActive: $gotoOne
                 ) { EmptyView() }
+
                 
                 if !history.readings.isEmpty {
                     List {
@@ -51,8 +54,8 @@ struct HomeView: View {
                 } else {
                     Spacer()
                     EmptyStateView(
-                        title: L10n.homeEmptyTitle,
-                        actionTitle: L10n.homeEmptyCTA
+                        title: "开始你的第一组解读吧～",
+                        actionTitle: "抽一组牌"
                     ) {
                         gotoOne = true
                     }

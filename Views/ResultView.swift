@@ -96,6 +96,7 @@ private extension Array {
 //
 
 struct ShareRenderer {
+    @MainActor
     static func makeImage(from view: some View) -> UIImage {
         let renderer = ImageRenderer(content: view)
         renderer.scale = UIScreen.main.scale
