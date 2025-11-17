@@ -1,0 +1,53 @@
+{
+  "_comment": "Rider–Waite deck template. Fill in for 78 cards. Keep `id` stable for history.",
+  "meta": { "version": "1.0.0", "language": "zh-CN", "license": "Your-asset-license-here" },
+  "cards": [
+    {
+      "id": "MAJOR_00",
+      "name": { "zh": "0 愚者", "en": "0 The Fool" },
+      "arcana": "major",
+      "suit": null,
+      "number": 0,
+      "keywords": { "upright": ["冒险","自由","新开始"], "reversed": ["鲁莽","犹豫","方向不明"] },
+      "meanings": {
+        "upright": {
+          "general": "崭新的旅程与开放心态。",
+          "love": "勇敢尝试新的关系或打破旧模式。",
+          "career": "拥抱机会，即使未知。",
+          "advice": "带着好奇前行，不必面面俱到。"
+        },
+        "reversed": {
+          "general": "缺乏计划或不切实际的理想。",
+          "love": "避免盲目投入，留意界限。",
+          "career": "先打好基础再跃进。",
+          "advice": "停一下，评估风险与资源。"
+        }
+      },
+      "image": { "assetName": "MAJOR_00_FOOL", "attribution": "your_attribution_here" }
+    },
+    {
+      "id": "MAJOR_01",
+      "name": { "zh": "I 魔术师", "en": "I The Magician" },
+      "arcana": "major",
+      "suit": null,
+      "number": 1,
+      "keywords": { "upright": ["意志","专注","实现"], "reversed": ["分散","操控","技巧不足"] },
+      "meanings": {
+        "upright": {
+          "general": "聚焦资源与意图，实践创意。",
+          "love": "主动沟通，表达真实需求。",
+          "career": "把点子落地，用工具达成目标。",
+          "advice": "聚焦一件事，采取第一步行动。"
+        },
+        "reversed": {
+          "general": "沟通不清或意图摇摆。",
+          "love": "避免话术操控，回到真诚。",
+          "career": "技能欠缺可通过学习补齐。",
+          "advice": "厘清动机，避免分心。"
+        }
+      },
+      "image": { "assetName": "MAJOR_01_MAGICIAN", "attribution": "your_attribution_here" }
+    }
+  ]
+}
+
