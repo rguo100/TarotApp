@@ -3,10 +3,11 @@ import UIKit
 
 struct DrawView: View {
     @EnvironmentObject var deck: TarotDeck
-    @EnvironmentObject var history: ReadingHistoryStore
+//    @EnvironmentObject var history: ReadingHistoryStore
 
     let question: String
     let spread: SpreadPreset
+    let intentHint: IntentUI?
 
     @State private var drawn: [DrawnCard] = []
     @State private var isShuffling = false
@@ -28,11 +29,7 @@ struct DrawView: View {
                         .clipShape(RoundedRectangle(cornerRadius: AppTheme.corner))
                 }
                 .disabled(isShuffling)
-
-                Text("问题：\(question.isEmpty ? "（未填写）" : question)")
-                    .foregroundStyle(.secondary)
-
-                Spacer()
+                
             } else {
                 ScrollView {
                     VStack(spacing: 12) {
@@ -48,20 +45,13 @@ struct DrawView: View {
                         }
 
                         // 生成解读并保存（入历史）
-                        PillButton(title: "生成解读并保存",
+                        PillButton(title: "生成解读",
                                    systemImage: "wand.and.stars",
                                    prominent: true) {
                             saveReading(alsoSave: true)
                         }
                         .padding(.horizontal)
                         .padding(.top, 8)
-
-                        // 仅查看解析（不保存）
-                        PillButton(title: "仅查看解析",
-                                   systemImage: "text.book.closed") {
-                            saveReading(alsoSave: false)
-                        }
-                        .padding(.horizontal)
                     }
                 }
             }
@@ -69,10 +59,8 @@ struct DrawView: View {
         .padding(.bottom)
         .navigationTitle("抽牌")
         .navigationBarTitleDisplayMode(.inline)
-        .sheet(isPresented: $showResult) {
-            if let r = latestReading {
-                ResultView(reading: r)
-            }
+        .sheet(item: $latestReading) { r in
+            ResultView(reading: r)
         }
     }
 
@@ -81,6 +69,7 @@ struct DrawView: View {
         isShuffling = true
         drawn.removeAll()
 
+        let s = spread.model
         let count = spread.model.positions.count
         let picked = deck.draw(count: max(count, 1))
         
@@ -88,25 +77,30 @@ struct DrawView: View {
         print("picked is \(picked)")
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-            for (idx, c) in picked.enumerated() {
-                let reversed = deck.isReversed()
-                drawn.append(.init(card: c, isReversed: reversed, positionIndex: idx))
+            self.drawn = picked.enumerated().map { (idx, c) in
+                DrawnCard(
+                    card: c,
+                    isReversed: deck.isReversed(),
+                    positionIndex: idx
+                )
             }
             isShuffling = false
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            print("抽到 \(drawn.count) 张牌 for spread=\(s.id)")
         }
     }
 
     func saveReading(alsoSave: Bool) {
-        let reading = Reading(
+        var reading = Reading(
             timestamp: Date(),
             question: question,
             spreadId: spread.model.id,
             drawn: drawn
         )
-        if alsoSave { history.add(reading) }
-        latestReading = reading
-
+        reading.intentHint = intentHint?.rawValue
+        reading.isPro = !question.trimmingCharacters(in: .whitespaces).isEmpty
+//        if alsoSave { history.add(reading) }
+        latestReading = reading   // 触发 sheet(item:)
         UINotificationFeedbackGenerator().notificationOccurred(.success)
         showResult = true
     }

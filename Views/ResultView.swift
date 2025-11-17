@@ -4,6 +4,7 @@ import UIKit
 struct ResultView: View {
     let reading: Reading
     
+    @State private var polished: [PolishedChunk] = []
     // 分享功能相关
     @State private var shareImage: UIImage? = nil
     @State private var showShare = false
@@ -11,10 +12,8 @@ struct ResultView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                Text(reading.question.isEmpty ? "未命名问题" : reading.question)
-                    .font(.title2).bold()
                 Text(reading.timestamp, style: .date).foregroundStyle(.secondary)
-                
+
                 ForEach(Array(reading.drawn.enumerated()), id: \.offset) { idx, d in
                     VStack(alignment: .leading, spacing: 8) {
                         HStack {
@@ -33,6 +32,26 @@ struct ResultView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
                 
+                // 深度解读（润色）
+                if !polished.isEmpty {
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("✨ 深度解读")
+                            .font(.title3).bold()
+                        ForEach(polished) { p in
+                            Text(p.text)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                    .padding()
+                    .background(.thinMaterial)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+                if !reading.question.isEmpty {
+                    Text(reading.question)
+                        .font(.title2).bold()
+                }
+                
                 Text("⚠️ 免责声明：本结果仅供娱乐与自我反思，不构成医疗、法律或财务建议。")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
@@ -42,7 +61,18 @@ struct ResultView: View {
         }
         .navigationTitle("解读结果")
         .navigationBarTitleDisplayMode(.inline)
-        
+        .onAppear {
+            if polished.isEmpty {
+                let spread = LocalTarotInterpreter.resolveSpread(by: reading.spreadId)
+                let explicit = LocalTarotInterpreter.intent(from: reading.intentHint.flatMap(IntentUI.init(rawValue:)))
+                polished = LocalTarotInterpreter.shared.generate(
+                    question: reading.question,
+                    spread: spread,
+                    drawn: reading.drawn,
+                    explicitIntent: explicit
+                )
+            }
+        }
         // 🔗 分享按钮放在右上角
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -91,10 +121,8 @@ private extension Array {
     }
 }
 
-//
 // MARK: - 分享功能相关组件
 //
-
 struct ShareRenderer {
     @MainActor
     static func makeImage(from view: some View) -> UIImage {

@@ -1,66 +1,61 @@
 import SwiftUI
 
+enum IntentUI: String, CaseIterable, Identifiable {
+    case love, money, career, general
+    var id: Self { self }
+    var label: String {
+        switch self {
+        case .love: return "感情"
+        case .money: return "金钱"
+        case .career: return "工作"
+        case .general: return "整体"
+        }
+    }
+}
+
 struct HomeView: View {
     @EnvironmentObject var deck: TarotDeck
     @EnvironmentObject var history: ReadingHistoryStore
     @State private var question: String = ""
     @State private var showingSettings = false
-    @State private var gotoOne = false
-    @State private var gotoThree = false
-    @State private var path = NavigationPath()
+    @State private var intent: IntentUI = .general
+    @State private var showPaywall = false
+    @State private var proQuestion: String = ""
     
     var body: some View {
         NavigationStack {
             VStack(spacing: 16) {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("今天想问点什么？").font(.title2).bold()
-                    TextField("输入问题（可留空）", text: $question)
-                        .textFieldStyle(.roundedBorder)
+                    Picker("方向", selection: $intent) {
+                        ForEach(IntentUI.allCases) { i in Text(i.label).tag(i)
+                        }
+                    }
+                    .pickerStyle(.segmented)
                 }.padding(.horizontal)
                 
                 HStack {
-                    NavigationLink(value: NavTarget.draw(spread: .one)) {
+                    NavigationLink(value: NavTarget.draw(spread: .one, intent: intent)) {
                         BigButton(title: "每日一抽")
                     }
-                    NavigationLink(value: NavTarget.draw(spread: .three)) {
+                    NavigationLink(value: NavTarget.draw(spread: .three, intent: intent)) {
                         BigButton(title: "三张牌")
                     }
                 }.padding(.horizontal)
                 
-                NavigationLink(value: NavTarget.draw(spread: .celtic)) {
-                    BigButton(title: "凯尔特十字")
-                        .padding(.horizontal)
+                NavigationLink(value: NavTarget.draw(spread: .celtic, intent: intent)) {
+                    BigButton(title: "凯尔特十字").padding(.horizontal)
                 }
-
-                NavigationLink(
-                    destination: DrawView(question: "", spread: .one),
-                    isActive: $gotoOne
-                ) { EmptyView() }
-
+//                Button {
+//                    showPaywall = true
+//                } label: {
+//                    Text("精确提问（Pro）").frame(maxWidth: .infinity).padding()
+//                }
+                .background(.thinMaterial)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .padding(.horizontal)
                 
-                if !history.readings.isEmpty {
-                    List {
-                        Section("历史记录") {
-                            ForEach(history.readings) { r in
-                                NavigationLink(value: NavTarget.detail(reading: r)) {
-                                    VStack(alignment: .leading, spacing: 4) {
-                                        Text(r.question.isEmpty ? "未命名问题" : r.question).font(.headline)
-                                        Text(r.timestamp, style: .date).font(.caption)
-                                    }
-                                }
-                            }.onDelete(perform: history.delete)
-                        }
-                    }.listStyle(.insetGrouped)
-                } else {
-                    Spacer()
-                    EmptyStateView(
-                        title: "开始你的第一组解读吧～",
-                        actionTitle: "抽一组牌"
-                    ) {
-                        gotoOne = true
-                    }
-                    Spacer()
-                }
+                Spacer()
             }
             .navigationTitle("塔罗")
             .toolbar {
@@ -70,7 +65,7 @@ struct HomeView: View {
             }
             .navigationDestination(for: NavTarget.self) { target in
                 switch target {
-                case .draw(let spread): DrawView(question: question, spread: spread)
+                case .draw(let spread, let i): DrawView(question: "", spread: spread, intentHint: i)
                 case .detail(let reading): ResultView(reading: reading)
                 }
             }
@@ -80,7 +75,7 @@ struct HomeView: View {
 }
 
 enum NavTarget: Hashable {
-    case draw(spread: SpreadPreset)
+    case draw(spread: SpreadPreset, intent: IntentUI?)
     case detail(reading: Reading)
 }
 
