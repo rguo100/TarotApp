@@ -19,17 +19,23 @@ struct DrawView: View {
         let s = spread.model
 
         VStack(spacing: 16) {
-            Text(s.name).font(.title2).padding(.top)
+            Text(s.name).font(.title).padding(.top)
 
             if drawn.isEmpty {
                 Button(action: startDraw) {
                     Text(isShuffling ? "洗牌中..." : "开始抽牌")
-                        .frame(maxWidth: .infinity).padding()
-                        .background(AnyShapeStyle(.thinMaterial))
-                        .clipShape(RoundedRectangle(cornerRadius: AppTheme.corner))
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 56)
+                        .background(LinearGradient(colors: [MysticTheme.ink, MysticTheme.deep],startPoint: .top, endPoint: .bottom))
+                        .foregroundStyle(AnyShapeStyle(Color.white))
+                        .clipShape(RoundedRectangle(cornerRadius: MysticTheme.corner))
                 }
                 .disabled(isShuffling)
-                
+                .frame(maxWidth: 280)
+                .frame(maxWidth: .infinity)
+                .padding(.top, 55)
+                Spacer()
             } else {
                 ScrollView {
                     VStack(spacing: 12) {
@@ -44,10 +50,7 @@ struct DrawView: View {
                             )
                         }
 
-                        // 生成解读并保存（入历史）
-                        PillButton(title: "生成解读",
-                                   systemImage: "wand.and.stars",
-                                   prominent: true) {
+                        PillButton(title: "生成解读",systemImage: "wand.and.stars",prominent: true) {
                             saveReading(alsoSave: true)
                         }
                         .padding(.horizontal)
@@ -102,7 +105,6 @@ struct DrawView: View {
 //        if alsoSave { history.add(reading) }
         latestReading = reading   // 触发 sheet(item:)
         UINotificationFeedbackGenerator().notificationOccurred(.success)
-        showResult = true
     }
 }
 
@@ -123,13 +125,13 @@ private struct CardRowView: View {
 
             FlipCard {
                 ZStack {
-                    RoundedRectangle(cornerRadius: AppTheme.corner)
+                    RoundedRectangle(cornerRadius: MysticTheme.corner)
                         .fill(AppTheme.gradient.opacity(0.12))
-                        .overlay(RoundedRectangle(cornerRadius: AppTheme.corner).stroke(.quaternary, lineWidth: 1))
+                        .overlay(RoundedRectangle(cornerRadius: MysticTheme.corner).stroke(.quaternary, lineWidth: 1))
                     Text("轻点翻牌").foregroundStyle(.secondary)
                 }
                 .frame(maxWidth: .infinity)
-                .aspectRatio(AppTheme.tarotAspect, contentMode: .fit)
+                .aspectRatio(MysticTheme.cardAspect, contentMode: .fit)
                 .padding(.horizontal)
             } back: {
                 TarotCardFace(
