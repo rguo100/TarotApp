@@ -5,6 +5,8 @@ enum MysticTheme {
     static let goldSoft = Color(hex: 0xE6D08B)
     static let deep = Color(hex: 0x0A0A12)
     static let ink  = Color(hex: 0x1A1A26)
+    static let white = Color(hex: 0xFFFFFF)
+    static let light = Color(hex: 0xE4E1E1)
     static let nebulaTop = Color(hex: 0x0A0A12)
     static let nebulaBottom = Color(hex: 0x1C1B29)
     static let corner: CGFloat = 16

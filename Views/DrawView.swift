@@ -19,16 +19,15 @@ struct DrawView: View {
         let s = spread.model
 
         VStack(spacing: 16) {
-            Text(s.name).font(.title).padding(.top)
-
             if drawn.isEmpty {
+                Text(s.name).font(.title).padding(.top, 150).foregroundColor(MysticTheme.light)
                 Button(action: startDraw) {
                     Text(isShuffling ? "洗牌中..." : "开始抽牌")
                         .font(.headline)
                         .frame(maxWidth: .infinity)
                         .frame(height: 56)
-                        .background(LinearGradient(colors: [MysticTheme.ink, MysticTheme.deep],startPoint: .top, endPoint: .bottom))
-                        .foregroundStyle(AnyShapeStyle(Color.white))
+                        .background(LinearGradient(colors: [MysticTheme.light, MysticTheme.white],startPoint: .top, endPoint: .bottom))
+                        .foregroundStyle(AnyShapeStyle(Color.black))
                         .clipShape(RoundedRectangle(cornerRadius: MysticTheme.corner))
                 }
                 .disabled(isShuffling)
@@ -49,12 +48,10 @@ struct DrawView: View {
                                 drawn: d
                             )
                         }
-
                         PillButton(title: "生成解读",systemImage: "wand.and.stars",prominent: true) {
                             saveReading(alsoSave: true)
                         }
                         .padding(.horizontal)
-                        .padding(.top, 8)
                     }
                 }
             }
@@ -65,6 +62,13 @@ struct DrawView: View {
         .sheet(item: $latestReading) { r in
             ResultView(reading: r)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            Image("tarot_bg")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+        )
     }
 
     // MARK: - Actions
@@ -103,7 +107,7 @@ struct DrawView: View {
         reading.intentHint = intentHint?.rawValue
         reading.isPro = !question.trimmingCharacters(in: .whitespaces).isEmpty
 //        if alsoSave { history.add(reading) }
-        latestReading = reading   // 触发 sheet(item:)
+        latestReading = reading
         UINotificationFeedbackGenerator().notificationOccurred(.success)
     }
 }
@@ -117,9 +121,9 @@ private struct CardRowView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
-                Text("\(index). \(positionName)").font(.headline)
+                Text("\(index). \(positionName)").font(.headline).foregroundColor(MysticTheme.light)
                 Spacer()
-                Text(drawn.isReversed ? "逆位" : "正位").foregroundStyle(.secondary)
+                Text(drawn.isReversed ? "逆位" : "正位").foregroundStyle(.secondary).foregroundColor(MysticTheme.white)
             }
             .padding(.horizontal)
 
@@ -130,17 +134,17 @@ private struct CardRowView: View {
                         .overlay(RoundedRectangle(cornerRadius: MysticTheme.corner).stroke(.quaternary, lineWidth: 1))
                     Text("轻点翻牌").foregroundStyle(.secondary)
                 }
-                .frame(maxWidth: .infinity)
                 .aspectRatio(MysticTheme.cardAspect, contentMode: .fit)
                 .padding(.horizontal)
-            } back: {
+            }
+            back: {
                 TarotCardFace(
                     assetName: drawn.card.image.assetName,
                     title: drawn.card.name.zh,
                     isReversed: drawn.isReversed
                 )
-                .padding(.horizontal)
             }
         }
+        .frame(maxHeight: UIScreen.main.bounds.height * 0.5)
     }
 }
