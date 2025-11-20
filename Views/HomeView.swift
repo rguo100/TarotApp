@@ -50,16 +50,16 @@ struct HomeView: View {
                 VStack(spacing: 12) {
                     HStack(spacing: 12) {
                         NavigationLink(value: NavTarget.draw(spread: .one, intent: intent)) {
-                            MysticButton(title: "每日一抽", style:.filledGold, systemImage: "sparkles")
+                            MysticButton(title: "每日一抽", style:.filledLight, systemImage: "sparkles")
                         }
                         NavigationLink(value: NavTarget.draw(spread: .three, intent: intent)) {
-                            MysticButton(title: "三张牌",style: .filledGold, systemImage: "triangle")
+                            MysticButton(title: "三张牌",style: .filledLight, systemImage: "triangle")
                         }
                     }
                     .padding(.horizontal)
-                        
+                       
                     NavigationLink(value: NavTarget.draw(spread: .celtic, intent: intent)) {
-                        MysticButton(title: "凯尔特十字",style: .filledGold, systemImage: "circle.grid.3x3")
+                        MysticButton(title: "精准提问 & AI解读",style: .filledGold, systemImage: "circle.grid.3x3")
                     }
                     .padding(.horizontal)
                 }

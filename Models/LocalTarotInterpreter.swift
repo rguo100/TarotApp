@@ -179,7 +179,8 @@ final class LocalTarotInterpreter {
 
             \(closingOptions.randomElement()!)
             """
-            return [PolishedChunk(index: 0, title: "今日能量", text: deep)]
+            let title = hasQuestion ? "回应你的提问" : "整体解读"
+            return [PolishedChunk(index: 0, title: title, text: deep)]
         }
 
         // MARK: 三张牌

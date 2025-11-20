@@ -9,7 +9,6 @@ struct TarotCardFace: View {
         VStack(spacing: 10) {
             ZStack {
                 RoundedRectangle(cornerRadius: 18, style: .continuous)
-                    .fill(.thinMaterial)
                     .overlay(
                         RoundedRectangle(cornerRadius: 18).stroke(MysticTheme.gold.opacity(0.7), lineWidth: 1)
                     )

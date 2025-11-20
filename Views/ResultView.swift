@@ -13,24 +13,6 @@ struct ResultView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 Text(reading.timestamp, style: .date).foregroundStyle(.secondary)
-
-                ForEach(Array(reading.drawn.enumerated()), id: \.offset) { idx, d in
-                    VStack(alignment: .leading, spacing: 8) {
-                        HStack {
-                            Text("#\(idx+1) · \(positionName(index: idx, spreadId: reading.spreadId))")
-                                .font(.headline)
-                            Spacer()
-                            Text(d.isReversed ? "逆位" : "正位")
-                                .font(.subheadline).foregroundStyle(.secondary)
-                        }
-                        Text(d.card.name.zh).font(.title3)
-                        Text(summary(for: d))
-                            .foregroundStyle(.secondary)
-                    }
-                    .padding()
-                    .background(.ultraThinMaterial)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                }
                 
                 // 深度解读（润色）
                 if !polished.isEmpty {

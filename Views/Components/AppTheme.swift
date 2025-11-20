@@ -56,7 +56,7 @@ struct GlassCard<Content: View>: View {
 }
 
 // 神秘按钮
-enum MysticButtonStyleKind { case filledGold, filledDark, glassOutline }
+enum MysticButtonStyleKind { case filledGold, filledDark,filledLight, glassOutline }
 
 struct MysticButton: View {
     let title: String
@@ -115,6 +115,11 @@ struct MysticButton: View {
                 LinearGradient(colors: [MysticTheme.ink, MysticTheme.deep],
                                startPoint: .top, endPoint: .bottom)
             )
+        case .filledLight:
+            return AnyShapeStyle(
+                LinearGradient(colors: [MysticTheme.light, MysticTheme.white],
+                               startPoint: .topLeading, endPoint: .bottomTrailing)
+            )
         case .glassOutline:
             return AnyShapeStyle(.ultraThinMaterial)
         }
@@ -123,6 +128,8 @@ struct MysticButton: View {
     private var foreground: AnyShapeStyle {
         switch style {
         case .filledGold:
+            return AnyShapeStyle(Color.black.opacity(0.85))
+        case .filledLight:
             return AnyShapeStyle(Color.black.opacity(0.85))
         default:
             return AnyShapeStyle(Color.white)
