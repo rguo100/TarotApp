@@ -64,5 +64,7 @@ struct Reading: Identifiable, Codable, Hashable {
     let spreadId: String
     let drawn: [DrawnCard]
     var notes: String = ""
+    var intentHint: String? = nil   // "love"/"money"/"career"/"general"
+    var isPro: Bool = false
 }
 

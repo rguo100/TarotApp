@@ -1,52 +1,2944 @@
 {
-  "_comment": "Rider–Waite deck template. Fill in for 78 cards. Keep `id` stable for history.",
-  "meta": { "version": "1.0.0", "language": "zh-CN", "license": "Your-asset-license-here" },
+  "meta": {
+    "version": "2.0.0",
+    "language": "zh-CN+en",
+    "license": "Public Domain / CC0 recommended"
+  },
   "cards": [
     {
       "id": "MAJOR_00",
-      "name": { "zh": "0 愚者", "en": "0 The Fool" },
+      "name": {
+        "zh": "愚者",
+        "en": "The Fool"
+      },
       "arcana": "major",
       "suit": null,
       "number": 0,
-      "keywords": { "upright": ["冒险","自由","新开始"], "reversed": ["鲁莽","犹豫","方向不明"] },
+      "keywords": {
+        "upright": [
+          "开始",
+          "自由",
+          "信念",
+          "冒险"
+        ],
+        "reversed": [
+          "冲动",
+          "鲁莽",
+          "迷茫",
+          "风险"
+        ]
+      },
       "meanings": {
         "upright": {
-          "general": "崭新的旅程与开放心态。",
-          "love": "勇敢尝试新的关系或打破旧模式。",
-          "career": "拥抱机会，即使未知。",
-          "advice": "带着好奇前行，不必面面俱到。"
+          "general": "新的旅程与可能性，保持好奇与信任。",
+          "love": "以真诚的心开启关系，不要过度设限。",
+          "career": "尝试新方向，勇于迈出第一步。",
+          "advice": "轻装上阵，相信直觉，但注意基本安全。"
         },
         "reversed": {
-          "general": "缺乏计划或不切实际的理想。",
-          "love": "避免盲目投入，留意界限。",
-          "career": "先打好基础再跃进。",
-          "advice": "停一下，评估风险与资源。"
+          "general": "缺乏计划的冲动或逃避现实。",
+          "love": "不负责任的承诺或一时兴起的暧昧。",
+          "career": "盲目跳槽/创业，忽略风险与细节。",
+          "advice": "先评估，再行动；设下底线与界限。"
         }
       },
-      "image": { "assetName": "MAJOR_00_FOOL", "attribution": "your_attribution_here" }
+      "image": {
+        "assetName": "major_00_the_fool",
+        "attribution": "Public Domain (RWS originals)"
+      }
     },
     {
       "id": "MAJOR_01",
-      "name": { "zh": "I 魔术师", "en": "I The Magician" },
+      "name": {
+        "zh": "魔术师",
+        "en": "The Magician"
+      },
       "arcana": "major",
       "suit": null,
       "number": 1,
-      "keywords": { "upright": ["意志","专注","实现"], "reversed": ["分散","操控","技巧不足"] },
+      "keywords": {
+        "upright": [
+          "意志",
+          "沟通",
+          "资源",
+          "实现"
+        ],
+        "reversed": [
+          "操控",
+          "欺骗",
+          "分散",
+          "不专注"
+        ]
+      },
       "meanings": {
         "upright": {
-          "general": "聚焦资源与意图，实践创意。",
-          "love": "主动沟通，表达真实需求。",
-          "career": "把点子落地，用工具达成目标。",
-          "advice": "聚焦一件事，采取第一步行动。"
+          "general": "意志与资源到位，进入“能量可用”状态。",
+          "love": "坦诚沟通能推进关系。",
+          "career": "具备完成目标的工具与能力。",
+          "advice": "聚焦当下，化想法为行动。"
         },
         "reversed": {
-          "general": "沟通不清或意图摇摆。",
-          "love": "避免话术操控，回到真诚。",
-          "career": "技能欠缺可通过学习补齐。",
-          "advice": "厘清动机，避免分心。"
+          "general": "力量被滥用或动机不纯。",
+          "love": "话术多于真心，需识别真伪。",
+          "career": "分心或技巧未被正用。",
+          "advice": "回到初心，校准动机，精简目标。"
         }
       },
-      "image": { "assetName": "MAJOR_01_MAGICIAN", "attribution": "your_attribution_here" }
+      "image": {
+        "assetName": "major_01_the_magician",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_02",
+      "name": {
+        "zh": "女祭司",
+        "en": "The High Priestess"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 2,
+      "keywords": {
+        "upright": [
+          "直觉",
+          "潜意识",
+          "沉静",
+          "神秘"
+        ],
+        "reversed": [
+          "压抑直觉",
+          "秘密",
+          "隔阂",
+          "逃避"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "聆听内在声音，耐心观察而非急于介入。",
+          "love": "以感受辨别关系的真实温度。",
+          "career": "先做研究与信息收集，静待时机。",
+          "advice": "信任直觉与梦的提示。"
+        },
+        "reversed": {
+          "general": "忽略内在警讯或情绪被压下。",
+          "love": "心事不说导致疏离。",
+          "career": "信息不透明，需核实来源。",
+          "advice": "开诚布公，给自己一段安静的时间。"
+        }
+      },
+      "image": {
+        "assetName": "major_02_the_high_priestess",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_03",
+      "name": {
+        "zh": "女皇",
+        "en": "The Empress"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 3,
+      "keywords": {
+        "upright": [
+          "滋养",
+          "丰盛",
+          "美与感官",
+          "成长"
+        ],
+        "reversed": [
+          "纵容",
+          "依赖",
+          "停滞",
+          "过度放纵"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "环境支持成长，照顾身心与美感。",
+          "love": "关系中的温柔与给予带来稳定。",
+          "career": "项目有资源，适合打磨品质。",
+          "advice": "先滋养自己，再滋养他人。"
+        },
+        "reversed": {
+          "general": "过度溺爱或忽略自身需要。",
+          "love": "付出过多而失衡。",
+          "career": "仅追求舒适导致停滞。",
+          "advice": "重建界限，回到健康节奏。"
+        }
+      },
+      "image": {
+        "assetName": "major_03_the_empress",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_04",
+      "name": {
+        "zh": "皇帝",
+        "en": "The Emperor"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 4,
+      "keywords": {
+        "upright": [
+          "秩序",
+          "权威",
+          "结构",
+          "责任"
+        ],
+        "reversed": [
+          "僵化",
+          "专断",
+          "控制",
+          "失序"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "设立规则与边界，承担领导责任。",
+          "love": "可靠与承诺带来安全感。",
+          "career": "以制度与规划推进目标。",
+          "advice": "稳住立场，用事实与原则说话。"
+        },
+        "reversed": {
+          "general": "僵化的控制或权力失衡。",
+          "love": "强势压制亲密的流动。",
+          "career": "规则不合时宜或被滥用。",
+          "advice": "松动框架，听见他人的声音。"
+        }
+      },
+      "image": {
+        "assetName": "major_04_the_emperor",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_05",
+      "name": {
+        "zh": "教皇",
+        "en": "The Hierophant"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 5,
+      "keywords": {
+        "upright": [
+          "传统",
+          "学习",
+          "信仰",
+          "导师"
+        ],
+        "reversed": [
+          "教条",
+          "盲从",
+          "反叛",
+          "价值冲突"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "向经验体系学习，与价值相契合。",
+          "love": "关系走向承诺或仪式化。",
+          "career": "遵循标准流程更易成功。",
+          "advice": "请教权威或遵守行业规范。"
+        },
+        "reversed": {
+          "general": "被传统束缚或为反叛而反叛。",
+          "love": "形式大于真情。",
+          "career": "固守旧法阻碍创新。",
+          "advice": "分辨传统的核心与外壳。"
+        }
+      },
+      "image": {
+        "assetName": "major_05_the_hierophant",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_06",
+      "name": {
+        "zh": "恋人",
+        "en": "The Lovers"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 6,
+      "keywords": {
+        "upright": [
+          "选择",
+          "契合",
+          "亲密",
+          "价值一致"
+        ],
+        "reversed": [
+          "分歧",
+          "犹豫",
+          "诱惑",
+          "失衡"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "基于价值与真心的选择。",
+          "love": "彼此吸引与坦诚沟通。",
+          "career": "寻找志同道合的伙伴。",
+          "advice": "做对心灵负责的决定。"
+        },
+        "reversed": {
+          "general": "价值冲突或摇摆不定。",
+          "love": "失衡依赖或第三者诱惑。",
+          "career": "团队不一致导致效率低。",
+          "advice": "回到初心，明确“我真正要什么”。"
+        }
+      },
+      "image": {
+        "assetName": "major_06_the_lovers",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_07",
+      "name": {
+        "zh": "战车",
+        "en": "The Chariot"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 7,
+      "keywords": {
+        "upright": [
+          "胜利",
+          "掌控",
+          "专注",
+          "意志力"
+        ],
+        "reversed": [
+          "失控",
+          "分裂",
+          "固执",
+          "方向不明"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "集中意志，协调资源，直面挑战。",
+          "love": "以成熟的方式推进关系。",
+          "career": "项目进入加速阶段。",
+          "advice": "握稳方向盘，适时收放。"
+        },
+        "reversed": {
+          "general": "情绪或节奏失控。",
+          "love": "强拉对方按你的节奏。",
+          "career": "目标分散难以推进。",
+          "advice": "先整合内在冲突，再出发。"
+        }
+      },
+      "image": {
+        "assetName": "major_07_the_chariot",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_08",
+      "name": {
+        "zh": "力量",
+        "en": "Strength"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 8,
+      "keywords": {
+        "upright": [
+          "温柔的力量",
+          "自律",
+          "勇气",
+          "疗愈"
+        ],
+        "reversed": [
+          "自我怀疑",
+          "失控",
+          "软弱",
+          "压抑"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "以温柔与自律驯服内心的野性。",
+          "love": "用理解与包容修复亲密。",
+          "career": "稳健推进，韧性是关键。",
+          "advice": "相信自己，柔中带刚。"
+        },
+        "reversed": {
+          "general": "被情绪牵引或自信动摇。",
+          "love": "压抑或爆发影响关系质量。",
+          "career": "缺乏耐性导致半途而废。",
+          "advice": "接纳脆弱，重建自我支持。"
+        }
+      },
+      "image": {
+        "assetName": "major_08_strength",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_09",
+      "name": {
+        "zh": "隐者",
+        "en": "The Hermit"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 9,
+      "keywords": {
+        "upright": [
+          "独处",
+          "洞察",
+          "检视",
+          "导师"
+        ],
+        "reversed": [
+          "孤立",
+          "逃避",
+          "闭塞",
+          "拖延"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "暂离喧嚣以找回答案。",
+          "love": "给彼此空间，反思需求。",
+          "career": "先做内在澄清与复盘。",
+          "advice": "向内求光，不急于表态。"
+        },
+        "reversed": {
+          "general": "过度退缩成孤立。",
+          "love": "回避沟通造成疏远。",
+          "career": "拖延或闭门造车。",
+          "advice": "适度向外交流，获取反馈。"
+        }
+      },
+      "image": {
+        "assetName": "major_09_the_hermit",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_10",
+      "name": {
+        "zh": "命运之轮",
+        "en": "Wheel of Fortune"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 10,
+      "keywords": {
+        "upright": [
+          "周期",
+          "转机",
+          "同步性",
+          "机缘"
+        ],
+        "reversed": [
+          "停滞",
+          "错失",
+          "重复",
+          "不顺"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "趋势转向，顺势而为。",
+          "love": "缘分到来或关系进入新阶段。",
+          "career": "外部环境改变带来机会。",
+          "advice": "抓住窗口期，及时调整策略。"
+        },
+        "reversed": {
+          "general": "运势低潮或重复旧问题。",
+          "love": "旧模式再现，需打破循环。",
+          "career": "错过节奏导致被动。",
+          "advice": "复盘规律，等待下个高点。"
+        }
+      },
+      "image": {
+        "assetName": "major_10_wheel_of_fortune",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_11",
+      "name": {
+        "zh": "正义",
+        "en": "Justice"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 11,
+      "keywords": {
+        "upright": [
+          "公平",
+          "因果",
+          "决策",
+          "平衡"
+        ],
+        "reversed": [
+          "失衡",
+          "偏见",
+          "不公",
+          "逃避责任"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "基于事实与原则做出公正判断。",
+          "love": "关系中的边界和等价交换。",
+          "career": "依法合规，文书与合同重要。",
+          "advice": "诚实面对因果，承担后果。"
+        },
+        "reversed": {
+          "general": "评判失衡或信息不全。",
+          "love": "双标或冷硬的算计。",
+          "career": "程序失当引发纠纷。",
+          "advice": "补齐信息，公平以待。"
+        }
+      },
+      "image": {
+        "assetName": "major_11_justice",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_12",
+      "name": {
+        "zh": "倒吊人",
+        "en": "The Hanged Man"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 12,
+      "keywords": {
+        "upright": [
+          "暂停",
+          "换位",
+          "臣服",
+          "牺牲"
+        ],
+        "reversed": [
+          "僵局",
+          "抗拒",
+          "被动",
+          "徒劳"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "短暂停顿换来新的视角。",
+          "love": "放下执念，理解对方立场。",
+          "career": "优化优先级，等待更佳时点。",
+          "advice": "以退为进，抱持弹性。"
+        },
+        "reversed": {
+          "general": "拖延与消极的牺牲。",
+          "love": "单方面付出不被看见。",
+          "career": "停在原地却不改变方法。",
+          "advice": "从“耗损”抽身，重设方案。"
+        }
+      },
+      "image": {
+        "assetName": "major_12_the_hanged_man",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_13",
+      "name": {
+        "zh": "死神",
+        "en": "Death"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 13,
+      "keywords": {
+        "upright": [
+          "结束",
+          "重生",
+          "放下",
+          "转化"
+        ],
+        "reversed": [
+          "拒绝改变",
+          "拖延终结",
+          "停滞",
+          "纠缠"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "一个阶段结束，新的篇章将启。",
+          "love": "旧关系/旧模式的终结与更新。",
+          "career": "止损与重组，迎接转型。",
+          "advice": "接受无常，主动清理。"
+        },
+        "reversed": {
+          "general": "害怕变化而抓紧不放。",
+          "love": "分分合合的消耗。",
+          "career": "拖延止损导致代价更大。",
+          "advice": "勇敢做出“断舍离”。"
+        }
+      },
+      "image": {
+        "assetName": "major_13_death",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_14",
+      "name": {
+        "zh": "节制",
+        "en": "Temperance"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 14,
+      "keywords": {
+        "upright": [
+          "平衡",
+          "调和",
+          "节律",
+          "疗愈"
+        ],
+        "reversed": [
+          "失衡",
+          "过度",
+          "急躁",
+          "混乱"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "把握中庸之道，调整配比。",
+          "love": "相处节奏协调，温柔而稳定。",
+          "career": "跨部门合作与资源整合。",
+          "advice": "慢下来，找到合适的比例。"
+        },
+        "reversed": {
+          "general": "节奏打乱或过度极端。",
+          "love": "一味迁就或强求。",
+          "career": "沟通不畅，协作受阻。",
+          "advice": "回到中心，先稳定基本盘。"
+        }
+      },
+      "image": {
+        "assetName": "major_14_temperance",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_15",
+      "name": {
+        "zh": "恶魔",
+        "en": "The Devil"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 15,
+      "keywords": {
+        "upright": [
+          "束缚",
+          "欲望",
+          "成瘾",
+          "利益纠缠"
+        ],
+        "reversed": [
+          "解脱",
+          "觉醒",
+          "戒断",
+          "松绑"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "被欲望/恐惧牵引而失去自由。",
+          "love": "甜蜜与占有交织的小心机。",
+          "career": "高收益伴随高依赖或道德冲突。",
+          "advice": "看见锁链来自内心的执着。"
+        },
+        "reversed": {
+          "general": "觉察并开始松动束缚。",
+          "love": "放下控制与占有。",
+          "career": "脱离不健康的合作。",
+          "advice": "建立新的健康边界。"
+        }
+      },
+      "image": {
+        "assetName": "major_15_the_devil",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_16",
+      "name": {
+        "zh": "高塔",
+        "en": "The Tower"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 16,
+      "keywords": {
+        "upright": [
+          "崩塌",
+          "觉醒",
+          "突变",
+          "真相"
+        ],
+        "reversed": [
+          "余震",
+          "拖延崩塌",
+          "小范围损失"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "旧结构被打破，真相显现。",
+          "love": "一次剧烈冲突或决定性分歧。",
+          "career": "系统性风险或组织调整。",
+          "advice": "保护底线，快速应对再重建。"
+        },
+        "reversed": {
+          "general": "冲击减弱但影响仍在。",
+          "love": "迟来的分裂与清算。",
+          "career": "避免头痛医头，进行根因修复。",
+          "advice": "从碎片中提取教训。"
+        }
+      },
+      "image": {
+        "assetName": "major_16_the_tower",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_17",
+      "name": {
+        "zh": "星星",
+        "en": "The Star"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 17,
+      "keywords": {
+        "upright": [
+          "希望",
+          "疗愈",
+          "灵感",
+          "愿景"
+        ],
+        "reversed": [
+          "失望",
+          "怀疑",
+          "能量低",
+          "方向感弱"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "重拾信念与灵感，温柔复原。",
+          "love": "坦诚温暖带来连结。",
+          "career": "愿景驱动的长期项目。",
+          "advice": "保持清澈与耐心。"
+        },
+        "reversed": {
+          "general": "短暂失望或信心动摇。",
+          "love": "理想化过高导致落差。",
+          "career": "目标模糊难以落地。",
+          "advice": "从小目标重新点亮希望。"
+        }
+      },
+      "image": {
+        "assetName": "major_17_the_star",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_18",
+      "name": {
+        "zh": "月亮",
+        "en": "The Moon"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 18,
+      "keywords": {
+        "upright": [
+          "潜意识",
+          "直觉",
+          "迷雾",
+          "情绪"
+        ],
+        "reversed": [
+          "走出迷惘",
+          "真相浮现",
+          "情绪理清"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "信息不清，直觉强但易受情绪影响。",
+          "love": "多疑或不安，需要安全感。",
+          "career": "谣言/误解影响判断。",
+          "advice": "先稳住情绪，再做决定。"
+        },
+        "reversed": {
+          "general": "拨云见日，逐渐看清方向。",
+          "love": "不安减轻，能真实表达。",
+          "career": "澄清误会，恢复秩序。",
+          "advice": "记录情绪变化，建立自我安抚。"
+        }
+      },
+      "image": {
+        "assetName": "major_18_the_moon",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_19",
+      "name": {
+        "zh": "太阳",
+        "en": "The Sun"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 19,
+      "keywords": {
+        "upright": [
+          "成功",
+          "喜悦",
+          "清晰",
+          "能量"
+        ],
+        "reversed": [
+          "延迟",
+          "过度自信",
+          "表面乐观"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "能量高涨与清晰，成功在望。",
+          "love": "真诚快乐的互动。",
+          "career": "成绩显现与正向曝光。",
+          "advice": "保持开放，分享你的光。"
+        },
+        "reversed": {
+          "general": "好消息延迟或乐观过头。",
+          "love": "只做表面快乐的社交。",
+          "career": "炫耀取代实力。",
+          "advice": "脚踏实地，巩固基础。"
+        }
+      },
+      "image": {
+        "assetName": "major_19_the_sun",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_20",
+      "name": {
+        "zh": "审判",
+        "en": "Judgement"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 20,
+      "keywords": {
+        "upright": [
+          "觉醒",
+          "复苏",
+          "召唤",
+          "评估"
+        ],
+        "reversed": [
+          "犹豫",
+          "自责",
+          "错过召唤"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "阶段性复盘与觉醒，迎来召唤。",
+          "love": "旧情回归或关系升级的评估期。",
+          "career": "交卷时刻，开始新章。",
+          "advice": "听见灵魂的召唤，回应它。"
+        },
+        "reversed": {
+          "general": "害怕被评判而停滞。",
+          "love": "卡在旧事件的悔恨中。",
+          "career": "迟迟不宣判导致拖延。",
+          "advice": "接纳过往，轻装上路。"
+        }
+      },
+      "image": {
+        "assetName": "major_20_judgement",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "MAJOR_21",
+      "name": {
+        "zh": "世界",
+        "en": "The World"
+      },
+      "arcana": "major",
+      "suit": null,
+      "number": 21,
+      "keywords": {
+        "upright": [
+          "完成",
+          "整合",
+          "达成",
+          "旅程"
+        ],
+        "reversed": [
+          "未竟",
+          "封闭循环",
+          "差临门一脚"
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "圆满完成与整合，旅程告一段落。",
+          "love": "关系成熟稳定，适合承诺。",
+          "career": "项目收官，成果可见。",
+          "advice": "致谢、收束、开新局。"
+        },
+        "reversed": {
+          "general": "还有未收尾的部分。",
+          "love": "迟迟不定或停在舒适区。",
+          "career": "差临门一脚，需要最后推进。",
+          "advice": "补齐最后环节，再出发。"
+        }
+      },
+      "image": {
+        "assetName": "major_21_the_world",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "CUPS_01",
+      "name": {
+        "zh": "圣杯一",
+        "en": "Ace of Cups"
+      },
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 1,
+      "keywords": {
+        "upright": [
+          "情感流动、疗愈与连接。"
+        ],
+        "reversed": [
+          "情绪失衡、依赖或空虚."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "开端与灵感的种子。",
+          "love": "新的情感/机会",
+          "career": "启动阶段",
+          "advice": "把握机会"
+        },
+        "reversed": {
+          "general": "机会延迟或心门未开。",
+          "love": "不确定的表白/回应",
+          "career": "尚未落地",
+          "advice": "先梳理再行动"
+        }
+      },
+      "image": {
+        "assetName": "cups_01",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "CUPS_02",
+      "name": {
+        "zh": "圣杯二",
+        "en": "Two of Cups"
+      },
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 2,
+      "keywords": {
+        "upright": [
+          "情感流动、疗愈与连接。"
+        ],
+        "reversed": [
+          "情绪失衡、依赖或空虚."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "互动与对等。",
+          "love": "互选/互相吸引",
+          "career": "协作/配对",
+          "advice": "建立信任"
+        },
+        "reversed": {
+          "general": "失衡或犹疑。",
+          "love": "暧昧拉扯",
+          "career": "合作受阻",
+          "advice": "厘清边界"
+        }
+      },
+      "image": {
+        "assetName": "cups_02",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "CUPS_03",
+      "name": {
+        "zh": "圣杯三",
+        "en": "Three of Cups"
+      },
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 3,
+      "keywords": {
+        "upright": [
+          "情感流动、疗愈与连接。"
+        ],
+        "reversed": [
+          "情绪失衡、依赖或空虚."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "成长与共同创造。",
+          "love": "朋友力/庆祝",
+          "career": "团队配合",
+          "advice": "共享成果"
+        },
+        "reversed": {
+          "general": "小圈子/分裂。",
+          "love": "第三者/边界混乱",
+          "career": "团队不齐",
+          "advice": "回到共同目标"
+        }
+      },
+      "image": {
+        "assetName": "cups_03",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "CUPS_04",
+      "name": {
+        "zh": "圣杯四",
+        "en": "Four of Cups"
+      },
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 4,
+      "keywords": {
+        "upright": [
+          "情感流动、疗愈与连接。"
+        ],
+        "reversed": [
+          "情绪失衡、依赖或空虚."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "稳定与结构。",
+          "love": "安全感与居所",
+          "career": "稳步运营",
+          "advice": "感恩拥有"
+        },
+        "reversed": {
+          "general": "停滞或闭塞。",
+          "love": "倦怠/情感枯萎",
+          "career": "固化流程",
+          "advice": "引入变化"
+        }
+      },
+      "image": {
+        "assetName": "cups_04",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "CUPS_05",
+      "name": {
+        "zh": "圣杯五",
+        "en": "Five of Cups"
+      },
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 5,
+      "keywords": {
+        "upright": [
+          "情感流动、疗愈与连接。"
+        ],
+        "reversed": [
+          "情绪失衡、依赖或空虚."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "挑战与调整。",
+          "love": "不安全感/冷战",
+          "career": "竞争/波动",
+          "advice": "练习韧性"
+        },
+        "reversed": {
+          "general": "冲突消退。",
+          "love": "修复与原谅",
+          "career": "止损/回暖",
+          "advice": "用教训升级"
+        }
+      },
+      "image": {
+        "assetName": "cups_05",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "CUPS_06",
+      "name": {
+        "zh": "圣杯六",
+        "en": "Six of Cups"
+      },
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 6,
+      "keywords": {
+        "upright": [
+          "情感流动、疗愈与连接。"
+        ],
+        "reversed": [
+          "情绪失衡、依赖或空虚."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "回馈与顺流。",
+          "love": "温柔/怀旧",
+          "career": "阶段性认可",
+          "advice": "分享与慷慨"
+        },
+        "reversed": {
+          "general": "失衡付出。",
+          "love": "停留在过去",
+          "career": "名誉与现实落差",
+          "advice": "回到当下"
+        }
+      },
+      "image": {
+        "assetName": "cups_06",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "CUPS_07",
+      "name": {
+        "zh": "圣杯七",
+        "en": "Seven of Cups"
+      },
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 7,
+      "keywords": {
+        "upright": [
+          "情感流动、疗愈与连接。"
+        ],
+        "reversed": [
+          "情绪失衡、依赖或空虚."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "评估与选择。",
+          "love": "想象/筛选对象",
+          "career": "策略与坚持",
+          "advice": "聚焦优先级"
+        },
+        "reversed": {
+          "general": "犹豫或防御过度。",
+          "love": "承诺不明",
+          "career": "精力分散",
+          "advice": "以小步验证"
+        }
+      },
+      "image": {
+        "assetName": "cups_07",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "CUPS_08",
+      "name": {
+        "zh": "圣杯八",
+        "en": "Eight of Cups"
+      },
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 8,
+      "keywords": {
+        "upright": [
+          "情感流动、疗愈与连接。"
+        ],
+        "reversed": [
+          "情绪失衡、依赖或空虚."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "行动与进阶。",
+          "love": "为价值离开/前进",
+          "career": "技能提升/执行力",
+          "advice": "持续打磨"
+        },
+        "reversed": {
+          "general": "卡住或拖延。",
+          "love": "舍不得放手",
+          "career": "低效/倦怠",
+          "advice": "复盘流程"
+        }
+      },
+      "image": {
+        "assetName": "cups_08",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "CUPS_09",
+      "name": {
+        "zh": "圣杯九",
+        "en": "Nine of Cups"
+      },
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 9,
+      "keywords": {
+        "upright": [
+          "情感流动、疗愈与连接。"
+        ],
+        "reversed": [
+          "情绪失衡、依赖或空虚."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "成熟与守护。",
+          "love": "疗愈后的独立",
+          "career": "临门一脚的守望",
+          "advice": "留力冲刺"
+        },
+        "reversed": {
+          "general": "疲惫或防御墙。",
+          "love": "过度自保",
+          "career": "消耗过大",
+          "advice": "补充能量"
+        }
+      },
+      "image": {
+        "assetName": "cups_09",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "CUPS_10",
+      "name": {
+        "zh": "圣杯十",
+        "en": "Ten of Cups"
+      },
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 10,
+      "keywords": {
+        "upright": [
+          "情感流动、疗愈与连接。"
+        ],
+        "reversed": [
+          "情绪失衡、依赖或空虚."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "完成与圆满。",
+          "love": "家/群体的满足",
+          "career": "阶段收官/责任感",
+          "advice": "整合与致谢"
+        },
+        "reversed": {
+          "general": "负担/过载。",
+          "love": "表面圆满",
+          "career": "责任压顶",
+          "advice": "学会分担"
+        }
+      },
+      "image": {
+        "assetName": "cups_10",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "CUPS_11",
+      "name": {
+        "zh": "圣杯侍从",
+        "en": "Page of Cups"
+      },
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 11,
+      "keywords": {
+        "upright": [
+          "情感流动、疗愈与连接。"
+        ],
+        "reversed": [
+          "情绪失衡、依赖或空虚."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "消息/学习/探索。",
+          "love": "真诚示好",
+          "career": "初学者心态",
+          "advice": "提出问题"
+        },
+        "reversed": {
+          "general": "幼稚/拖延。",
+          "love": "情绪化讯息",
+          "career": "浅尝辄止",
+          "advice": "回到基础"
+        }
+      },
+      "image": {
+        "assetName": "cups_page",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "CUPS_12",
+      "name": {
+        "zh": "圣杯骑士",
+        "en": "Knight of Cups"
+      },
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 12,
+      "keywords": {
+        "upright": [
+          "情感流动、疗愈与连接。"
+        ],
+        "reversed": [
+          "情绪失衡、依赖或空虚."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "行动/推进/旅行。",
+          "love": "热烈追求",
+          "career": "执行力强",
+          "advice": "把计划落地"
+        },
+        "reversed": {
+          "general": "冲动或停滞。",
+          "love": "忽冷忽热",
+          "career": "方向摇摆",
+          "advice": "稳定节奏"
+        }
+      },
+      "image": {
+        "assetName": "cups_knight",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "CUPS_13",
+      "name": {
+        "zh": "圣杯皇后",
+        "en": "Queen of Cups"
+      },
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 13,
+      "keywords": {
+        "upright": [
+          "情感流动、疗愈与连接。"
+        ],
+        "reversed": [
+          "情绪失衡、依赖或空虚."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "内在成熟/滋养。",
+          "love": "体贴与共情",
+          "career": "稳住团队情绪",
+          "advice": "以身作则"
+        },
+        "reversed": {
+          "general": "情绪操控。",
+          "love": "占有或冷漠",
+          "career": "情绪化决策",
+          "advice": "先照顾自己"
+        }
+      },
+      "image": {
+        "assetName": "cups_queen",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "CUPS_14",
+      "name": {
+        "zh": "圣杯国王",
+        "en": "King of Cups"
+      },
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 14,
+      "keywords": {
+        "upright": [
+          "情感流动、疗愈与连接。"
+        ],
+        "reversed": [
+          "情绪失衡、依赖或空虚."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "外在掌控/领导。",
+          "love": "承诺与掌舵",
+          "career": "定策略/做决断",
+          "advice": "明晰原则"
+        },
+        "reversed": {
+          "general": "独断/压制。",
+          "love": "控制或失责",
+          "career": "僵化管理",
+          "advice": "授权与信任"
+        }
+      },
+      "image": {
+        "assetName": "cups_king",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "WANDS_01",
+      "name": {
+        "zh": "权杖一",
+        "en": "Ace of Wands"
+      },
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 1,
+      "keywords": {
+        "upright": [
+          "灵感、行动、热情与推进。"
+        ],
+        "reversed": [
+          "冲动、拖延或动力不稳."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "开端与灵感的种子。",
+          "love": "新的情感/机会",
+          "career": "启动阶段",
+          "advice": "把握机会"
+        },
+        "reversed": {
+          "general": "机会延迟或心门未开。",
+          "love": "不确定的表白/回应",
+          "career": "尚未落地",
+          "advice": "先梳理再行动"
+        }
+      },
+      "image": {
+        "assetName": "wands_01",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "WANDS_02",
+      "name": {
+        "zh": "权杖二",
+        "en": "Two of Wands"
+      },
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 2,
+      "keywords": {
+        "upright": [
+          "灵感、行动、热情与推进。"
+        ],
+        "reversed": [
+          "冲动、拖延或动力不稳."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "互动与对等。",
+          "love": "互选/互相吸引",
+          "career": "协作/配对",
+          "advice": "建立信任"
+        },
+        "reversed": {
+          "general": "失衡或犹疑。",
+          "love": "暧昧拉扯",
+          "career": "合作受阻",
+          "advice": "厘清边界"
+        }
+      },
+      "image": {
+        "assetName": "wands_02",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "WANDS_03",
+      "name": {
+        "zh": "权杖三",
+        "en": "Three of Wands"
+      },
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 3,
+      "keywords": {
+        "upright": [
+          "灵感、行动、热情与推进。"
+        ],
+        "reversed": [
+          "冲动、拖延或动力不稳."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "成长与共同创造。",
+          "love": "朋友力/庆祝",
+          "career": "团队配合",
+          "advice": "共享成果"
+        },
+        "reversed": {
+          "general": "小圈子/分裂。",
+          "love": "第三者/边界混乱",
+          "career": "团队不齐",
+          "advice": "回到共同目标"
+        }
+      },
+      "image": {
+        "assetName": "wands_03",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "WANDS_04",
+      "name": {
+        "zh": "权杖四",
+        "en": "Four of Wands"
+      },
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 4,
+      "keywords": {
+        "upright": [
+          "灵感、行动、热情与推进。"
+        ],
+        "reversed": [
+          "冲动、拖延或动力不稳."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "稳定与结构。",
+          "love": "安全感与居所",
+          "career": "稳步运营",
+          "advice": "感恩拥有"
+        },
+        "reversed": {
+          "general": "停滞或闭塞。",
+          "love": "倦怠/情感枯萎",
+          "career": "固化流程",
+          "advice": "引入变化"
+        }
+      },
+      "image": {
+        "assetName": "wands_04",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "WANDS_05",
+      "name": {
+        "zh": "权杖五",
+        "en": "Five of Wands"
+      },
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 5,
+      "keywords": {
+        "upright": [
+          "灵感、行动、热情与推进。"
+        ],
+        "reversed": [
+          "冲动、拖延或动力不稳."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "挑战与调整。",
+          "love": "不安全感/冷战",
+          "career": "竞争/波动",
+          "advice": "练习韧性"
+        },
+        "reversed": {
+          "general": "冲突消退。",
+          "love": "修复与原谅",
+          "career": "止损/回暖",
+          "advice": "用教训升级"
+        }
+      },
+      "image": {
+        "assetName": "wands_05",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "WANDS_06",
+      "name": {
+        "zh": "权杖六",
+        "en": "Six of Wands"
+      },
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 6,
+      "keywords": {
+        "upright": [
+          "灵感、行动、热情与推进。"
+        ],
+        "reversed": [
+          "冲动、拖延或动力不稳."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "回馈与顺流。",
+          "love": "温柔/怀旧",
+          "career": "阶段性认可",
+          "advice": "分享与慷慨"
+        },
+        "reversed": {
+          "general": "失衡付出。",
+          "love": "停留在过去",
+          "career": "名誉与现实落差",
+          "advice": "回到当下"
+        }
+      },
+      "image": {
+        "assetName": "wands_06",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "WANDS_07",
+      "name": {
+        "zh": "权杖七",
+        "en": "Seven of Wands"
+      },
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 7,
+      "keywords": {
+        "upright": [
+          "灵感、行动、热情与推进。"
+        ],
+        "reversed": [
+          "冲动、拖延或动力不稳."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "评估与选择。",
+          "love": "想象/筛选对象",
+          "career": "策略与坚持",
+          "advice": "聚焦优先级"
+        },
+        "reversed": {
+          "general": "犹豫或防御过度。",
+          "love": "承诺不明",
+          "career": "精力分散",
+          "advice": "以小步验证"
+        }
+      },
+      "image": {
+        "assetName": "wands_07",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "WANDS_08",
+      "name": {
+        "zh": "权杖八",
+        "en": "Eight of Wands"
+      },
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 8,
+      "keywords": {
+        "upright": [
+          "灵感、行动、热情与推进。"
+        ],
+        "reversed": [
+          "冲动、拖延或动力不稳."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "行动与进阶。",
+          "love": "为价值离开/前进",
+          "career": "技能提升/执行力",
+          "advice": "持续打磨"
+        },
+        "reversed": {
+          "general": "卡住或拖延。",
+          "love": "舍不得放手",
+          "career": "低效/倦怠",
+          "advice": "复盘流程"
+        }
+      },
+      "image": {
+        "assetName": "wands_08",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "WANDS_09",
+      "name": {
+        "zh": "权杖九",
+        "en": "Nine of Wands"
+      },
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 9,
+      "keywords": {
+        "upright": [
+          "灵感、行动、热情与推进。"
+        ],
+        "reversed": [
+          "冲动、拖延或动力不稳."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "成熟与守护。",
+          "love": "疗愈后的独立",
+          "career": "临门一脚的守望",
+          "advice": "留力冲刺"
+        },
+        "reversed": {
+          "general": "疲惫或防御墙。",
+          "love": "过度自保",
+          "career": "消耗过大",
+          "advice": "补充能量"
+        }
+      },
+      "image": {
+        "assetName": "wands_09",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "WANDS_10",
+      "name": {
+        "zh": "权杖十",
+        "en": "Ten of Wands"
+      },
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 10,
+      "keywords": {
+        "upright": [
+          "灵感、行动、热情与推进。"
+        ],
+        "reversed": [
+          "冲动、拖延或动力不稳."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "完成与圆满。",
+          "love": "家/群体的满足",
+          "career": "阶段收官/责任感",
+          "advice": "整合与致谢"
+        },
+        "reversed": {
+          "general": "负担/过载。",
+          "love": "表面圆满",
+          "career": "责任压顶",
+          "advice": "学会分担"
+        }
+      },
+      "image": {
+        "assetName": "wands_10",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "WANDS_11",
+      "name": {
+        "zh": "权杖侍从",
+        "en": "Page of Wands"
+      },
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 11,
+      "keywords": {
+        "upright": [
+          "灵感、行动、热情与推进。"
+        ],
+        "reversed": [
+          "冲动、拖延或动力不稳."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "消息/学习/探索。",
+          "love": "真诚示好",
+          "career": "初学者心态",
+          "advice": "提出问题"
+        },
+        "reversed": {
+          "general": "幼稚/拖延。",
+          "love": "情绪化讯息",
+          "career": "浅尝辄止",
+          "advice": "回到基础"
+        }
+      },
+      "image": {
+        "assetName": "wands_page",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "WANDS_12",
+      "name": {
+        "zh": "权杖骑士",
+        "en": "Knight of Wands"
+      },
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 12,
+      "keywords": {
+        "upright": [
+          "灵感、行动、热情与推进。"
+        ],
+        "reversed": [
+          "冲动、拖延或动力不稳."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "行动/推进/旅行。",
+          "love": "热烈追求",
+          "career": "执行力强",
+          "advice": "把计划落地"
+        },
+        "reversed": {
+          "general": "冲动或停滞。",
+          "love": "忽冷忽热",
+          "career": "方向摇摆",
+          "advice": "稳定节奏"
+        }
+      },
+      "image": {
+        "assetName": "wands_knight",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "WANDS_13",
+      "name": {
+        "zh": "权杖皇后",
+        "en": "Queen of Wands"
+      },
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 13,
+      "keywords": {
+        "upright": [
+          "灵感、行动、热情与推进。"
+        ],
+        "reversed": [
+          "冲动、拖延或动力不稳."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "内在成熟/滋养。",
+          "love": "体贴与共情",
+          "career": "稳住团队情绪",
+          "advice": "以身作则"
+        },
+        "reversed": {
+          "general": "情绪操控。",
+          "love": "占有或冷漠",
+          "career": "情绪化决策",
+          "advice": "先照顾自己"
+        }
+      },
+      "image": {
+        "assetName": "wands_queen",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "WANDS_14",
+      "name": {
+        "zh": "权杖国王",
+        "en": "King of Wands"
+      },
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 14,
+      "keywords": {
+        "upright": [
+          "灵感、行动、热情与推进。"
+        ],
+        "reversed": [
+          "冲动、拖延或动力不稳."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "外在掌控/领导。",
+          "love": "承诺与掌舵",
+          "career": "定策略/做决断",
+          "advice": "明晰原则"
+        },
+        "reversed": {
+          "general": "独断/压制。",
+          "love": "控制或失责",
+          "career": "僵化管理",
+          "advice": "授权与信任"
+        }
+      },
+      "image": {
+        "assetName": "wands_king",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "SWORDS_01",
+      "name": {
+        "zh": "宝剑一",
+        "en": "Ace of Swords"
+      },
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 1,
+      "keywords": {
+        "upright": [
+          "理性、沟通、决策与清晰。"
+        ],
+        "reversed": [
+          "焦虑、冲突或过度思虑."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "开端与灵感的种子。",
+          "love": "新的情感/机会",
+          "career": "启动阶段",
+          "advice": "把握机会"
+        },
+        "reversed": {
+          "general": "机会延迟或心门未开。",
+          "love": "不确定的表白/回应",
+          "career": "尚未落地",
+          "advice": "先梳理再行动"
+        }
+      },
+      "image": {
+        "assetName": "swords_01",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "SWORDS_02",
+      "name": {
+        "zh": "宝剑二",
+        "en": "Two of Swords"
+      },
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 2,
+      "keywords": {
+        "upright": [
+          "理性、沟通、决策与清晰。"
+        ],
+        "reversed": [
+          "焦虑、冲突或过度思虑."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "互动与对等。",
+          "love": "互选/互相吸引",
+          "career": "协作/配对",
+          "advice": "建立信任"
+        },
+        "reversed": {
+          "general": "失衡或犹疑。",
+          "love": "暧昧拉扯",
+          "career": "合作受阻",
+          "advice": "厘清边界"
+        }
+      },
+      "image": {
+        "assetName": "swords_02",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "SWORDS_03",
+      "name": {
+        "zh": "宝剑三",
+        "en": "Three of Swords"
+      },
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 3,
+      "keywords": {
+        "upright": [
+          "理性、沟通、决策与清晰。"
+        ],
+        "reversed": [
+          "焦虑、冲突或过度思虑."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "成长与共同创造。",
+          "love": "朋友力/庆祝",
+          "career": "团队配合",
+          "advice": "共享成果"
+        },
+        "reversed": {
+          "general": "小圈子/分裂。",
+          "love": "第三者/边界混乱",
+          "career": "团队不齐",
+          "advice": "回到共同目标"
+        }
+      },
+      "image": {
+        "assetName": "swords_03",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "SWORDS_04",
+      "name": {
+        "zh": "宝剑四",
+        "en": "Four of Swords"
+      },
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 4,
+      "keywords": {
+        "upright": [
+          "理性、沟通、决策与清晰。"
+        ],
+        "reversed": [
+          "焦虑、冲突或过度思虑."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "稳定与结构。",
+          "love": "安全感与居所",
+          "career": "稳步运营",
+          "advice": "感恩拥有"
+        },
+        "reversed": {
+          "general": "停滞或闭塞。",
+          "love": "倦怠/情感枯萎",
+          "career": "固化流程",
+          "advice": "引入变化"
+        }
+      },
+      "image": {
+        "assetName": "swords_04",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "SWORDS_05",
+      "name": {
+        "zh": "宝剑五",
+        "en": "Five of Swords"
+      },
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 5,
+      "keywords": {
+        "upright": [
+          "理性、沟通、决策与清晰。"
+        ],
+        "reversed": [
+          "焦虑、冲突或过度思虑."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "挑战与调整。",
+          "love": "不安全感/冷战",
+          "career": "竞争/波动",
+          "advice": "练习韧性"
+        },
+        "reversed": {
+          "general": "冲突消退。",
+          "love": "修复与原谅",
+          "career": "止损/回暖",
+          "advice": "用教训升级"
+        }
+      },
+      "image": {
+        "assetName": "swords_05",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "SWORDS_06",
+      "name": {
+        "zh": "宝剑六",
+        "en": "Six of Swords"
+      },
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 6,
+      "keywords": {
+        "upright": [
+          "理性、沟通、决策与清晰。"
+        ],
+        "reversed": [
+          "焦虑、冲突或过度思虑."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "回馈与顺流。",
+          "love": "温柔/怀旧",
+          "career": "阶段性认可",
+          "advice": "分享与慷慨"
+        },
+        "reversed": {
+          "general": "失衡付出。",
+          "love": "停留在过去",
+          "career": "名誉与现实落差",
+          "advice": "回到当下"
+        }
+      },
+      "image": {
+        "assetName": "swords_06",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "SWORDS_07",
+      "name": {
+        "zh": "宝剑七",
+        "en": "Seven of Swords"
+      },
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 7,
+      "keywords": {
+        "upright": [
+          "理性、沟通、决策与清晰。"
+        ],
+        "reversed": [
+          "焦虑、冲突或过度思虑."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "评估与选择。",
+          "love": "想象/筛选对象",
+          "career": "策略与坚持",
+          "advice": "聚焦优先级"
+        },
+        "reversed": {
+          "general": "犹豫或防御过度。",
+          "love": "承诺不明",
+          "career": "精力分散",
+          "advice": "以小步验证"
+        }
+      },
+      "image": {
+        "assetName": "swords_07",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "SWORDS_08",
+      "name": {
+        "zh": "宝剑八",
+        "en": "Eight of Swords"
+      },
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 8,
+      "keywords": {
+        "upright": [
+          "理性、沟通、决策与清晰。"
+        ],
+        "reversed": [
+          "焦虑、冲突或过度思虑."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "行动与进阶。",
+          "love": "为价值离开/前进",
+          "career": "技能提升/执行力",
+          "advice": "持续打磨"
+        },
+        "reversed": {
+          "general": "卡住或拖延。",
+          "love": "舍不得放手",
+          "career": "低效/倦怠",
+          "advice": "复盘流程"
+        }
+      },
+      "image": {
+        "assetName": "swords_08",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "SWORDS_09",
+      "name": {
+        "zh": "宝剑九",
+        "en": "Nine of Swords"
+      },
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 9,
+      "keywords": {
+        "upright": [
+          "理性、沟通、决策与清晰。"
+        ],
+        "reversed": [
+          "焦虑、冲突或过度思虑."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "成熟与守护。",
+          "love": "疗愈后的独立",
+          "career": "临门一脚的守望",
+          "advice": "留力冲刺"
+        },
+        "reversed": {
+          "general": "疲惫或防御墙。",
+          "love": "过度自保",
+          "career": "消耗过大",
+          "advice": "补充能量"
+        }
+      },
+      "image": {
+        "assetName": "swords_09",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "SWORDS_10",
+      "name": {
+        "zh": "宝剑十",
+        "en": "Ten of Swords"
+      },
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 10,
+      "keywords": {
+        "upright": [
+          "理性、沟通、决策与清晰。"
+        ],
+        "reversed": [
+          "焦虑、冲突或过度思虑."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "完成与圆满。",
+          "love": "家/群体的满足",
+          "career": "阶段收官/责任感",
+          "advice": "整合与致谢"
+        },
+        "reversed": {
+          "general": "负担/过载。",
+          "love": "表面圆满",
+          "career": "责任压顶",
+          "advice": "学会分担"
+        }
+      },
+      "image": {
+        "assetName": "swords_10",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "SWORDS_11",
+      "name": {
+        "zh": "宝剑侍从",
+        "en": "Page of Swords"
+      },
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 11,
+      "keywords": {
+        "upright": [
+          "理性、沟通、决策与清晰。"
+        ],
+        "reversed": [
+          "焦虑、冲突或过度思虑."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "消息/学习/探索。",
+          "love": "真诚示好",
+          "career": "初学者心态",
+          "advice": "提出问题"
+        },
+        "reversed": {
+          "general": "幼稚/拖延。",
+          "love": "情绪化讯息",
+          "career": "浅尝辄止",
+          "advice": "回到基础"
+        }
+      },
+      "image": {
+        "assetName": "swords_page",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "SWORDS_12",
+      "name": {
+        "zh": "宝剑骑士",
+        "en": "Knight of Swords"
+      },
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 12,
+      "keywords": {
+        "upright": [
+          "理性、沟通、决策与清晰。"
+        ],
+        "reversed": [
+          "焦虑、冲突或过度思虑."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "行动/推进/旅行。",
+          "love": "热烈追求",
+          "career": "执行力强",
+          "advice": "把计划落地"
+        },
+        "reversed": {
+          "general": "冲动或停滞。",
+          "love": "忽冷忽热",
+          "career": "方向摇摆",
+          "advice": "稳定节奏"
+        }
+      },
+      "image": {
+        "assetName": "swords_knight",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "SWORDS_13",
+      "name": {
+        "zh": "宝剑皇后",
+        "en": "Queen of Swords"
+      },
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 13,
+      "keywords": {
+        "upright": [
+          "理性、沟通、决策与清晰。"
+        ],
+        "reversed": [
+          "焦虑、冲突或过度思虑."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "内在成熟/滋养。",
+          "love": "体贴与共情",
+          "career": "稳住团队情绪",
+          "advice": "以身作则"
+        },
+        "reversed": {
+          "general": "情绪操控。",
+          "love": "占有或冷漠",
+          "career": "情绪化决策",
+          "advice": "先照顾自己"
+        }
+      },
+      "image": {
+        "assetName": "swords_queen",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "SWORDS_14",
+      "name": {
+        "zh": "宝剑国王",
+        "en": "King of Swords"
+      },
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 14,
+      "keywords": {
+        "upright": [
+          "理性、沟通、决策与清晰。"
+        ],
+        "reversed": [
+          "焦虑、冲突或过度思虑."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "外在掌控/领导。",
+          "love": "承诺与掌舵",
+          "career": "定策略/做决断",
+          "advice": "明晰原则"
+        },
+        "reversed": {
+          "general": "独断/压制。",
+          "love": "控制或失责",
+          "career": "僵化管理",
+          "advice": "授权与信任"
+        }
+      },
+      "image": {
+        "assetName": "swords_king",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "PENTACLES_01",
+      "name": {
+        "zh": "星币一",
+        "en": "Ace of Pentacles"
+      },
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 1,
+      "keywords": {
+        "upright": [
+          "物质、实践、稳定与价值。"
+        ],
+        "reversed": [
+          "停滞、失衡或价值扭曲."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "开端与灵感的种子。",
+          "love": "新的情感/机会",
+          "career": "启动阶段",
+          "advice": "把握机会"
+        },
+        "reversed": {
+          "general": "机会延迟或心门未开。",
+          "love": "不确定的表白/回应",
+          "career": "尚未落地",
+          "advice": "先梳理再行动"
+        }
+      },
+      "image": {
+        "assetName": "pentacles_01",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "PENTACLES_02",
+      "name": {
+        "zh": "星币二",
+        "en": "Two of Pentacles"
+      },
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 2,
+      "keywords": {
+        "upright": [
+          "物质、实践、稳定与价值。"
+        ],
+        "reversed": [
+          "停滞、失衡或价值扭曲."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "互动与对等。",
+          "love": "互选/互相吸引",
+          "career": "协作/配对",
+          "advice": "建立信任"
+        },
+        "reversed": {
+          "general": "失衡或犹疑。",
+          "love": "暧昧拉扯",
+          "career": "合作受阻",
+          "advice": "厘清边界"
+        }
+      },
+      "image": {
+        "assetName": "pentacles_02",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "PENTACLES_03",
+      "name": {
+        "zh": "星币三",
+        "en": "Three of Pentacles"
+      },
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 3,
+      "keywords": {
+        "upright": [
+          "物质、实践、稳定与价值。"
+        ],
+        "reversed": [
+          "停滞、失衡或价值扭曲."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "成长与共同创造。",
+          "love": "朋友力/庆祝",
+          "career": "团队配合",
+          "advice": "共享成果"
+        },
+        "reversed": {
+          "general": "小圈子/分裂。",
+          "love": "第三者/边界混乱",
+          "career": "团队不齐",
+          "advice": "回到共同目标"
+        }
+      },
+      "image": {
+        "assetName": "pentacles_03",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "PENTACLES_04",
+      "name": {
+        "zh": "星币四",
+        "en": "Four of Pentacles"
+      },
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 4,
+      "keywords": {
+        "upright": [
+          "物质、实践、稳定与价值。"
+        ],
+        "reversed": [
+          "停滞、失衡或价值扭曲."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "稳定与结构。",
+          "love": "安全感与居所",
+          "career": "稳步运营",
+          "advice": "感恩拥有"
+        },
+        "reversed": {
+          "general": "停滞或闭塞。",
+          "love": "倦怠/情感枯萎",
+          "career": "固化流程",
+          "advice": "引入变化"
+        }
+      },
+      "image": {
+        "assetName": "pentacles_04",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "PENTACLES_05",
+      "name": {
+        "zh": "星币五",
+        "en": "Five of Pentacles"
+      },
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 5,
+      "keywords": {
+        "upright": [
+          "物质、实践、稳定与价值。"
+        ],
+        "reversed": [
+          "停滞、失衡或价值扭曲."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "挑战与调整。",
+          "love": "不安全感/冷战",
+          "career": "竞争/波动",
+          "advice": "练习韧性"
+        },
+        "reversed": {
+          "general": "冲突消退。",
+          "love": "修复与原谅",
+          "career": "止损/回暖",
+          "advice": "用教训升级"
+        }
+      },
+      "image": {
+        "assetName": "pentacles_05",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "PENTACLES_06",
+      "name": {
+        "zh": "星币六",
+        "en": "Six of Pentacles"
+      },
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 6,
+      "keywords": {
+        "upright": [
+          "物质、实践、稳定与价值。"
+        ],
+        "reversed": [
+          "停滞、失衡或价值扭曲."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "回馈与顺流。",
+          "love": "温柔/怀旧",
+          "career": "阶段性认可",
+          "advice": "分享与慷慨"
+        },
+        "reversed": {
+          "general": "失衡付出。",
+          "love": "停留在过去",
+          "career": "名誉与现实落差",
+          "advice": "回到当下"
+        }
+      },
+      "image": {
+        "assetName": "pentacles_06",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "PENTACLES_07",
+      "name": {
+        "zh": "星币七",
+        "en": "Seven of Pentacles"
+      },
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 7,
+      "keywords": {
+        "upright": [
+          "物质、实践、稳定与价值。"
+        ],
+        "reversed": [
+          "停滞、失衡或价值扭曲."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "评估与选择。",
+          "love": "想象/筛选对象",
+          "career": "策略与坚持",
+          "advice": "聚焦优先级"
+        },
+        "reversed": {
+          "general": "犹豫或防御过度。",
+          "love": "承诺不明",
+          "career": "精力分散",
+          "advice": "以小步验证"
+        }
+      },
+      "image": {
+        "assetName": "pentacles_07",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "PENTACLES_08",
+      "name": {
+        "zh": "星币八",
+        "en": "Eight of Pentacles"
+      },
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 8,
+      "keywords": {
+        "upright": [
+          "物质、实践、稳定与价值。"
+        ],
+        "reversed": [
+          "停滞、失衡或价值扭曲."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "行动与进阶。",
+          "love": "为价值离开/前进",
+          "career": "技能提升/执行力",
+          "advice": "持续打磨"
+        },
+        "reversed": {
+          "general": "卡住或拖延。",
+          "love": "舍不得放手",
+          "career": "低效/倦怠",
+          "advice": "复盘流程"
+        }
+      },
+      "image": {
+        "assetName": "pentacles_08",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "PENTACLES_09",
+      "name": {
+        "zh": "星币九",
+        "en": "Nine of Pentacles"
+      },
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 9,
+      "keywords": {
+        "upright": [
+          "物质、实践、稳定与价值。"
+        ],
+        "reversed": [
+          "停滞、失衡或价值扭曲."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "成熟与守护。",
+          "love": "疗愈后的独立",
+          "career": "临门一脚的守望",
+          "advice": "留力冲刺"
+        },
+        "reversed": {
+          "general": "疲惫或防御墙。",
+          "love": "过度自保",
+          "career": "消耗过大",
+          "advice": "补充能量"
+        }
+      },
+      "image": {
+        "assetName": "pentacles_09",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "PENTACLES_10",
+      "name": {
+        "zh": "星币十",
+        "en": "Ten of Pentacles"
+      },
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 10,
+      "keywords": {
+        "upright": [
+          "物质、实践、稳定与价值。"
+        ],
+        "reversed": [
+          "停滞、失衡或价值扭曲."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "完成与圆满。",
+          "love": "家/群体的满足",
+          "career": "阶段收官/责任感",
+          "advice": "整合与致谢"
+        },
+        "reversed": {
+          "general": "负担/过载。",
+          "love": "表面圆满",
+          "career": "责任压顶",
+          "advice": "学会分担"
+        }
+      },
+      "image": {
+        "assetName": "pentacles_10",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "PENTACLES_11",
+      "name": {
+        "zh": "星币侍从",
+        "en": "Page of Pentacles"
+      },
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 11,
+      "keywords": {
+        "upright": [
+          "物质、实践、稳定与价值。"
+        ],
+        "reversed": [
+          "停滞、失衡或价值扭曲."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "消息/学习/探索。",
+          "love": "真诚示好",
+          "career": "初学者心态",
+          "advice": "提出问题"
+        },
+        "reversed": {
+          "general": "幼稚/拖延。",
+          "love": "情绪化讯息",
+          "career": "浅尝辄止",
+          "advice": "回到基础"
+        }
+      },
+      "image": {
+        "assetName": "pentacles_page",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "PENTACLES_12",
+      "name": {
+        "zh": "星币骑士",
+        "en": "Knight of Pentacles"
+      },
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 12,
+      "keywords": {
+        "upright": [
+          "物质、实践、稳定与价值。"
+        ],
+        "reversed": [
+          "停滞、失衡或价值扭曲."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "行动/推进/旅行。",
+          "love": "热烈追求",
+          "career": "执行力强",
+          "advice": "把计划落地"
+        },
+        "reversed": {
+          "general": "冲动或停滞。",
+          "love": "忽冷忽热",
+          "career": "方向摇摆",
+          "advice": "稳定节奏"
+        }
+      },
+      "image": {
+        "assetName": "pentacles_knight",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "PENTACLES_13",
+      "name": {
+        "zh": "星币皇后",
+        "en": "Queen of Pentacles"
+      },
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 13,
+      "keywords": {
+        "upright": [
+          "物质、实践、稳定与价值。"
+        ],
+        "reversed": [
+          "停滞、失衡或价值扭曲."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "内在成熟/滋养。",
+          "love": "体贴与共情",
+          "career": "稳住团队情绪",
+          "advice": "以身作则"
+        },
+        "reversed": {
+          "general": "情绪操控。",
+          "love": "占有或冷漠",
+          "career": "情绪化决策",
+          "advice": "先照顾自己"
+        }
+      },
+      "image": {
+        "assetName": "pentacles_queen",
+        "attribution": "Public Domain (RWS originals)"
+      }
+    },
+    {
+      "id": "PENTACLES_14",
+      "name": {
+        "zh": "星币国王",
+        "en": "King of Pentacles"
+      },
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 14,
+      "keywords": {
+        "upright": [
+          "物质、实践、稳定与价值。"
+        ],
+        "reversed": [
+          "停滞、失衡或价值扭曲."
+        ]
+      },
+      "meanings": {
+        "upright": {
+          "general": "外在掌控/领导。",
+          "love": "承诺与掌舵",
+          "career": "定策略/做决断",
+          "advice": "明晰原则"
+        },
+        "reversed": {
+          "general": "独断/压制。",
+          "love": "控制或失责",
+          "career": "僵化管理",
+          "advice": "授权与信任"
+        }
+      },
+      "image": {
+        "assetName": "pentacles_king",
+        "attribution": "Public Domain (RWS originals)"
+      }
     }
   ]
 }

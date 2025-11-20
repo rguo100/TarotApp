@@ -26,7 +26,16 @@ struct OnboardingView: View {
             .padding(.horizontal)
             Spacer()
         }
-        .background(LinearGradient(colors: [.background, .background.opacity(0.6)], startPoint: .top, endPoint: .bottom))
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [
+                    Color(UIColor.systemBackground),
+                    Color(UIColor.systemBackground).opacity(0.6)
+                ]),
+                startPoint: .top, endPoint: .bottom
+            )
+        )
+        .ignoresSafeArea()
     }
 }
 
